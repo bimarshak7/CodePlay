@@ -5,5 +5,5 @@ while True:
         if a%i!=0:
             a+=1
             break
-    if i==20:break
+    if i==a:break
 print(a)
