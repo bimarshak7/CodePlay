@@ -1,4 +1,5 @@
 #include<iostream>
+#include <bits/stdc++.h>
 #include <vector>
 #include <string>
 using namespace std;
@@ -23,15 +24,27 @@ class BigInt {
             output<<endl;
             return output;
         }
-
+        BigInt reverse(BigInt N){
+            BigInt tmp;
+                for(int i = N.bigint.size()-1; i >= 0; i--){
+                    tmp.bigint.push_back(N.bigint[i]);
+                }
+                return tmp;
+        }
         BigInt operator + (BigInt & B){
             int carry;
-
+            string result;
+            B = reverse(B);
+            *this = reverse(*this);
+            int size = B.bigint.size()>this->bigint.size()? B.bigint.size(): this->bigint.size();
+            return rev;
         }
 };
 
 int main(){
     BigInt a("122222");
+    BigInt b("1234");
     cout << a;
+    cout<<a+b;
     return 0;
 }
